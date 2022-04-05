@@ -50,4 +50,4 @@ strip -s sulla
 printf '\x02' | dd conv=notrunc of=./sulla bs=1 seek=5
 
 # Compile dummy target
-gcc .main.c -o target
+gcc main.c -o target
