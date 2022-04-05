@@ -364,10 +364,7 @@ main:
         lea rsi, [directoryentry]                                    
         mov rdx, DIRENT_BUFSIZE                               
         mov rax, SYS_GETDENTS64
-        syscall                                               
-
-        test rax, rax                                          
-        js end                                            
+        syscall                                                                                 
 
         mov qword [directorysize], rax                             
 
