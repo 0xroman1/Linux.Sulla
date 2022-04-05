@@ -539,8 +539,8 @@ process_file:
 
 	; -------------------------------
 	; Write patched jmp
+	; get targets new eof
 	; -------------------------------
-        ; getting target new EOF
         mov SYS_ARG0, TARGETFD                                   
         mov SYS_ARG1, 0                                    
         mov SYS_ARG2, SEEK_END
