@@ -1,4 +1,5 @@
 # Linux.Sulla
+https://i.imgur.com/cm5D1ot.png
 
 Infection via PT_NOTE -> PT_LOAD
 Non destructive payload - local execve shellcode
