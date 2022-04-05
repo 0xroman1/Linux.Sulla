@@ -478,6 +478,9 @@ process_file:
         syscall                                         
         push rax 
 
+	; ----------------------------------------
+	; Delta to calulate distacne
+	; ----------------------------------------
         call .distance                                   
         .distance:
         pop rbp
