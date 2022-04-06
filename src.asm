@@ -429,7 +429,7 @@ process_file:
         ; -------------------------------------------
 	; Load phdr
 	; -------------------------------------------
-	 .loop_phdr
+	.loop_phdr:
 	mov SYS_ARG0, TARGETFD                                        
         lea SYS_ARG1, [programheader]                               
         mov SYS_ARG2word, word [elfheader + e_hdr.phentsize]                           
