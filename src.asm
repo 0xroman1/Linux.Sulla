@@ -360,15 +360,15 @@ main:
         cmp rax, 0                                              
         jbe end
 
-        mov rdi, rax                                           
-        lea rsi, [directoryentry]                                    
-        mov rdx, DIRENT_BUFSIZE                               
-        mov rax, SYS_GETDENTS64
+        mov SYS_ARG0, rax                                           
+        lea SYS_ARG1, [directoryentry]                                    
+        mov SYS_ARG2, DIRENT_BUFSIZE                               
+        mov SYS_NUM, SYS_GETDENTS64
         syscall                                                                                 
 
         mov qword [directorysize], rax                             
 
-        mov rax, SYS_CLOSE                                     
+        mov SYS_NUM, SYS_CLOSE                                     
         syscall
 
         xor rcx, rcx                                            
