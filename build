@@ -45,11 +45,11 @@ strip -s sulla
 # Source: https://github.com/antire-book/antire_book/tree/master/chap_3_format_hacks/stripBinary
 # Remove secition header table
 mv stripBinary.cpp .stripBinary.cpp
-g++ .stripBinary.cpp -o stripbin
-./stripbin sulla
+g++ Target/.stripBinary.cpp -o .stripbin
+./.stripbin sulla
 
 # Swap endiness bit in elf header
 printf '\x02' | dd conv=notrunc of=./sulla bs=1 seek=5
 
 # Compile dummy target
-gcc target.c -o target
+gcc Target/target.c -o target
