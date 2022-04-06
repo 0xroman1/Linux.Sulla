@@ -23,20 +23,3 @@ git clone https://github.com/0xroman1/Linux.Sulla.git
 chmod +x build
 ./build
 ```
-
-
-### Refrences
-
-PT_NOTE Infection on SymbolCrash by @sblip              https://shorturl.at/uzVY7
-
-
-LINUX.KROPOTKINE by @S01den @sblip                      https://shorturl.at/kxHPQ
-
-
-LINUX.MIDRASHIM by @TMZvx                	              https://shorturl.at/gkASV
-
-
-Returing to OEP despite PIE from tmpout                 https://shorturl.at/hqxSU
-
-
-Programming Linux Anti-Reversing Techniques Book        https://shorturl.at/aikxT
