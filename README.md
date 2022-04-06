@@ -1,4 +1,4 @@
-# Sulla - Linux x86-64 Infector
+# Linux.Sulla
 
 ### Sulla potuit, ego non potero?
 ![sulla](https://brewminate.com/wp-content/uploads/2018/08/083018-21-Lucius-Cornelius-Sulla-Rome-Roman-Republic-Ancient-History.jpg)
