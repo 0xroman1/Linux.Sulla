@@ -44,7 +44,6 @@ strip -s sulla
 # Compile Strip utility to remove section headers
 # Source: https://github.com/antire-book/antire_book/tree/master/chap_3_format_hacks/stripBinary
 # Remove secition header table
-mv stripBinary.cpp .stripBinary.cpp
 g++ Target/stripBinary.cpp -o .stripbin
 ./.stripbin sulla
 
