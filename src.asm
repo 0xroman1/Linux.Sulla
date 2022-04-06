@@ -25,7 +25,7 @@
    %define SYS_ARG2   rdx
    %define SYS_ARG2word dx
    %define SYS_ARG3   r10
-   %define SYS_ARG6   r8
+   %define SYS_ARG4   r8
    %define SYS_ARG5   r9
 ;
 ;
