@@ -1,6 +1,6 @@
 # Linux.Sulla
 
-![sulla](https://images.fineartamerica.com/images-medium-large/lucius-cornelius-sulla-granger.jpg)
+![sulla](https://www.historiarex.com/uploads/files/1434773662.jpg)
 
 ![poc image](https://i.imgur.com/cm5D1ot.png)
 
