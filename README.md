@@ -27,13 +27,16 @@ chmod +x build
 
 ### Refrences
 
-PT_NOTE Infection on SymbolCrash by @sblip   https://shorturl.at/uzVY7
+PT_NOTE Infection on SymbolCrash by @sblip              https://shorturl.at/uzVY7
 
 
-LINUX.MIDRASHIM by @TMZvx                	https://shorturl.at/gkASV
+LINUX.MIDRASHIM by @TMZvx                	              https://shorturl.at/gkASV
 
 
-LINUX.KROPOTKINE by @S01den @sblip           https://shorturl.at/kxHPQ
+LINUX.KROPOTKINE by @S01den @sblip                      https://shorturl.at/kxHPQ
 
 
-Returing to OEP despite PIE from tmpout      https://shorturl.at/hqxSU
+Returing to OEP despite PIE from tmpout                 https://shorturl.at/hqxSU
+
+
+Programming Linux Anti-Reversing Techniques Book        https://shorturl.at/aikxT
