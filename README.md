@@ -6,10 +6,11 @@
 ![poc image](https://i.imgur.com/cm5D1ot.png)
 
 ### About
+**This is not a good or practical piece of VX, just a proof of concept to learn infection methods and basic anti virtual-machine techniques.**
+
+
 Infection occurs by coverting the target PT_NOTE section to PT_LOAD. I did not develop this technique and just wrote this to learn.
 
-
-This is not a good or practical piece of VX, just a proof of concept to learn infection methods and basic anti virtual-machine techniques.
 
 
 It uses a non destructive payload (local execve shellcode)
@@ -22,3 +23,16 @@ git clone https://github.com/0xroman1/Linux.Sulla.git
 chmod +x build
 ./build
 ```
+
+
+### Sources:
+PT_NOTE Infection on SymbolCrash by @sblip   https://shorturl.at/uzVY7
+
+
+LINUX.MIDRASHIM by @TMZvx                	https://shorturl.at/gkASV
+
+
+LINUX.KROPOTKINE by @S01den @sblip           https://shorturl.at/kxHPQ
+
+
+Returing to OEP despite PIE from tmpout      https://shorturl.at/hqxSU
