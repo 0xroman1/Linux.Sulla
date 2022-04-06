@@ -25,9 +25,7 @@ chmod +x build
 ```
 
 
-### Sources:
-Please read from these people as they are a lot smarter than I am.
-
+### Refrences
 
 PT_NOTE Infection on SymbolCrash by @sblip   https://shorturl.at/uzVY7
 
