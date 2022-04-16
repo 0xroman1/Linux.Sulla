@@ -6,7 +6,7 @@
 ![poc image](https://i.imgur.com/cm5D1ot.png)
 
 ### About
-**This is not a good or practical piece of VX, just a proof of concept to learn infection methods and basic anti virtual-machine techniques.**
+**This is not a good or practical virus, just a proof of concept to learn infection methods and basic anti virtual-machine techniques.**
 
 
 Infection occurs by coverting the target PT_NOTE section to PT_LOAD. I did not develop this technique and just wrote this to learn.
